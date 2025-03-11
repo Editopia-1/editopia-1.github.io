@@ -3,45 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لینک‌های من | Editopia</title>
+    <title>Editopia Links</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: #0a0f1d; /* آبی نفتی خیلی تیره */
+            background-image: url('assets/logo.png'); /* مسیر لوگو */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center top;
             text-align: center;
-            background-color: #121212;
+            font-family: Arial, sans-serif;
             color: white;
+            padding-top: 200px; /* تا لوگو بالا باشه */
         }
-        .container {
-            margin-top: 50px;
-        }
-        a {
-            display: block;
-            margin: 15px auto;
-            padding: 12px 20px;
-            text-decoration: none;
-            background: linear-gradient(45deg, #FF073A, #00BFFF);
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #ff073a;
             color: white;
-            border-radius: 10px;
-            width: 220px;
+            border: none;
+            border-radius: 8px;
             font-size: 18px;
-            font-weight: bold;
-            transition: 0.3s;
+            cursor: pointer;
         }
-        a:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7);
-        }
-        h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
+        .button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>👋 لینک‌های Editopia</h2>
-        <a href="https://www.instagram.com/edit_opia.co/?utm_source=qr&r=nametag" target="_blank">📷 اینستاگرام</a>
-        <a href="https://t.me/Editopia_Support" target="_blank">💬 پشتیبانی تلگرام</a>
-    </div>
+    <h1>لینک‌های ادیتوپیا</h1>
+    
+    <button class="button" onclick="window.location.href='https://www.instagram.com/edit_opia.co/?utm_source=qr&r=nametag'">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        اینستاگرام
+    </button>
+    
+    <button class="button" onclick="window.location.href='https://t.me/Editopia_Support'">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+        تلگرام
+    </button>
 </body>
 </html>
