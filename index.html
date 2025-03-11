@@ -4,44 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لینک‌های من | Editopia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pinata:wght@500&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Pinata', sans-serif;
             text-align: center;
-            background-color: #121212;
+            background: linear-gradient(45deg, rgba(255, 7, 58, 0.8), rgba(0, 191, 255, 0.8)), url('https://your-pattern-image-url-here.com'); /* بک‌گراند با گرادیانت و الگو */
+            background-size: cover;
+            background-position: center;
             color: white;
+            padding-top: 80px; /* فضای خالی برای لوگو */
         }
-        .container {
-            margin-top: 50px;
+        .logo {
+            width: 150px; /* اندازه لوگو */
+            margin: 0 auto 20px auto;
         }
-        a {
+        h1 {
+            font-size: 48px;
+            font-family: 'Pinata', sans-serif;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        .button {
             display: block;
             margin: 15px auto;
             padding: 12px 20px;
             text-decoration: none;
-            background: linear-gradient(45deg, #FF073A, #00BFFF); /* قرمز نئونی و آبی */
+            background: linear-gradient(45deg, #FF073A, #00BFFF); /* گرادیانت قرمز نئونی و آبی آسمانی */
             color: white;
             border-radius: 10px;
-            width: 220px;
+            width: 250px;
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 500;
             transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        a:hover {
+        .button:hover {
             transform: scale(1.1);
             box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7);
         }
-        h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
+        .button img {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>لینک‌های Editopia</h2>
-        <a href="https://www.instagram.com/edit_opia.co/?utm_source=qr&r=nametag" target="_blank">اینستاگرام</a>
-        <a href="https://t.me/Editopia_Support" target="_blank">پشتیبانی تلگرام</a>
-    </div>
+
+    <img src="assets/logo.png" alt="Editopia Logo" class="logo"> <!-- آدرس لوگو -->
+    
+    <h1>ادیتوپیا</h1>
+
+    <a href="https://www.instagram.com/edit_opia.co/?utm_source=qr&r=nametag" target="_blank" class="button">
+        اینستاگرام
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    </a>
+
+    <a href="https://t.me/Editopia_Support" target="_blank" class="button">
+        تلگرام
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+    </a>
+
 </body>
 </html>
