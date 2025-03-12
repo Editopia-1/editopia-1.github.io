@@ -135,16 +135,16 @@
         }
 
         .button img {
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-}
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+        }
 
-/* مخصوص آیکن نمونه کارها */
-.button .portfolio-icon {
-    width: 35px; /* سایز بزرگ‌تر */
-    height: 35px;
-}
+        /* مخصوص آیکن نمونه کارها */
+        .button .portfolio-icon {
+            width: 35px; /* سایز بزرگ‌تر */
+            height: 35px;
+        }
 
         /* برای اسکرول کردن صفحه */
         html, body {
@@ -152,6 +152,21 @@
             margin: 0;
         }
 
+        /* دکمه‌ها در سیستم (دو به دو کنار هم) */
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* برای موبایل دکمه‌ها زیر هم */
+        @media (max-width: 768px) {
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -160,25 +175,27 @@
     
     <h1>استودیو ادیتوپیا</h1>
 
-    <a href="https://www.instagram.com/edit_opia.co/?utm_source=qr&r=nametag" target="_blank" class="button">
-        پیج اینستاگرام
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-    </a>
+    <div class="buttons-container">
+        <a href="https://www.instagram.com/edit_opia.co/?utm_source=qr&r=nametag" target="_blank" class="button">
+            پیج اینستاگرام
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
 
-    <a href="https://t.me/Editopia_Support" target="_blank" class="button">
-        پشتیبانی تلگرام
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-    </a>
+        <a href="https://t.me/Editopia_Support" target="_blank" class="button">
+            پشتیبانی تلگرام
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+        </a>
 
-    <a href="tel:+989212089337" class="button">
-        تماس با ما
-        <img src="https://wallpapers.com/images/hd/blue-phone-icon-2eryoedlspnaaa7i.jpg" alt="Phone">
-    </a>
+        <a href="tel:+989212089337" class="button">
+            تماس با ما
+            <img src="https://wallpapers.com/images/hd/blue-phone-icon-2eryoedlspnaaa7i.jpg" alt="Phone">
+        </a>
 
-    <a href="https://t.me/Editopia_Support" target="_blank" class="button">
-        نمونه کارها
-        <img src="assets/portfolio.webp" alt="Portfolio" class="portfolio-icon">
-    </a>
+        <a href="https://t.me/Editopia_Support" target="_blank" class="button">
+            نمونه کارها
+            <img src="assets/portfolio.webp" alt="Portfolio" class="portfolio-icon">
+        </a>
+    </div>
 
 </body>
 </html>
