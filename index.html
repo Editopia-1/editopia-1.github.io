@@ -17,10 +17,10 @@
             background-image: url('assets/desc back.webp'); /* تصویر افقی برای سیستم */
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             color: white;
             padding-top: 55px;
             min-height: 100vh; /* به اندازه صفحه میاد */
+            position: relative;
         }
 
         /* بک گراند برای موبایل */
@@ -30,6 +30,18 @@
                 background-size: cover;
                 background-position: center;
             }
+        }
+
+        /* اضافه کردن لایه تاریک روی بک‌گراند */
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* رنگ نیمه‌شفاف سیاه */
+            z-index: -1; /* لایه پشت محتوای صفحه */
         }
 
         .logo {
@@ -70,6 +82,12 @@
             width: 24px;
             height: 24px;
             margin-left: 10px;
+        }
+
+        /* برای اسکرول کردن تصویر */
+        html, body {
+            height: 100%;
+            margin: 0;
         }
     </style>
 </head>
