@@ -32,6 +32,8 @@
                 background-size: cover; /* پوشش تمام صفحه */
                 background-position: center;
                 background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
+                height: auto; /* ارتفاع خودکار برای اسکرول */
+                min-height: 100vh; /* ارتفاع صفحه برابر با صفحه موبایل */
             }
         }
 
@@ -112,10 +114,12 @@
             animation: fadeInButton 2s ease-in-out 1s forwards; /* تاخیر در انیمیشن */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* سایه برای دکمه‌ها */
         }
-.button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7); /* سایه قوی‌تر در هاور */
-}
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7); /* سایه قوی‌تر در هاور */
+        }
+
         /* انیمیشن فید این برای دکمه‌ها */
         @keyframes fadeInButton {
             0% {
@@ -126,12 +130,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }
-
-        /* دکمه‌ها در حالت هاور */
-        .button:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7);
         }
 
         .button img {
