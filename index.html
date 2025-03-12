@@ -10,16 +10,26 @@
             src: url('assets/Pinata-Regular.ttf') format('truetype');
         }
 
+        /* بک گراند برای سیستم */
         body {
             font-family: 'Pinata', sans-serif;
             text-align: center;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('https://your-pattern-image-url-here.com');
+            background-image: url('assets/desc back.jpg'); /* تصویر افقی برای سیستم */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
             color: white;
             padding-top: 55px;
+            min-height: 100vh; /* به اندازه صفحه میاد */
+        }
+
+        /* بک گراند برای موبایل */
+        @media (max-width: 768px) {
+            body {
+                background-image: url('assets/phone back.jpg'); /* تصویر عمودی برای موبایل */
+                background-size: cover;
+                background-position: center;
+            }
         }
 
         .logo {
