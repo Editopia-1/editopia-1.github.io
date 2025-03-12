@@ -102,7 +102,7 @@
             background: linear-gradient(45deg, #FF073A, #00BFFF);
             color: white;
             border-radius: 10px;
-            width: 250px;
+            width: calc(50% - 10px); /* عرض دکمه‌ها به نصف تغییر کرد */
             font-size: 18px;
             font-weight: 500;
             transition: transform 0.6s ease, box-shadow 0.3s ease, padding 0.3s ease; /* انیمیشن برای بزرگ شدن و سایه */
@@ -157,7 +157,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 100px;
+            gap: 10px;
         }
 
         /* برای موبایل دکمه‌ها زیر هم */
@@ -165,6 +165,10 @@
             .buttons-container {
                 flex-direction: column;
                 align-items: center;
+                gap: 30px;
+            }
+            .button {
+                width: 250px; /* برای موبایل عرض دکمه‌ها رو ثابت می‌کنیم */
             }
         }
     </style>
