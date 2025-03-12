@@ -32,8 +32,8 @@
                 background-size: cover; /* پوشش تمام صفحه */
                 background-position: center;
                 background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
-                height: auto; /* ارتفاع خودکار برای اسکرول */
                 min-height: 100vh; /* ارتفاع صفحه برابر با صفحه موبایل */
+                height: auto; /* ارتفاع خودکار برای اسکرول */
             }
         }
 
@@ -106,7 +106,7 @@
             width: 250px;
             font-size: 18px;
             font-weight: 500;
-            transition: 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن برای بزرگ شدن و سایه */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -115,8 +115,9 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* سایه برای دکمه‌ها */
         }
 
+        /* افکت هاور روی دکمه‌ها */
         .button:hover {
-            transform: scale(1.1);
+            transform: scale(1.1); /* بزرگ شدن دکمه */
             box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7); /* سایه قوی‌تر در هاور */
         }
 
