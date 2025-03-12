@@ -25,6 +25,19 @@
             overflow-x: hidden; /* جلوگیری از اسکرول افقی */
         }
 
+        /* لایه تاریک روی بک‌گراند */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.35); /* رنگ نیمه‌شفاف سیاه */
+            backdrop-filter: blur(1.5px); /* افکت بلر برای پس‌زمینه */
+            z-index: -1; /* لایه پشت محتوای صفحه */
+        }
+
         /* بک گراند برای موبایل */
         @media (max-width: 768px) {
             body {
@@ -34,19 +47,6 @@
                 background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
                 background-attachment: fixed; /* ثابت بودن پس‌زمینه هنگام اسکرول */
             }
-        }
-
-        /* اضافه کردن لایه تاریک روی بک‌گراند */
-        body::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.35); /* رنگ نیمه‌شفاف سیاه */
-            backdrop-filter: blur(1.5px); /* افکت بلر برای پس‌زمینه */
-            z-index: -1; /* لایه پشت محتوای صفحه */
         }
 
         /* لوگو */
