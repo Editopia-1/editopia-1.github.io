@@ -14,15 +14,15 @@
         body {
             font-family: 'Pinata', sans-serif;
             text-align: center;
-            background-image: url('assets/desc back.webp'); /* تصویر افقی برای سیستم */
-            background-size: cover; /* برای اینکه بک‌گراند دقیقا به اندازه صفحه پوشش دهد */
+            background-image: url('assets/desc back.webp');
+            background-size: cover;
             background-position: center;
             color: white;
             padding-top: 55px;
-            min-height: 100vh; /* به اندازه صفحه میاد */
+            min-height: 100vh;
             position: relative;
-            background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
-            overflow-x: hidden; /* جلوگیری از اسکرول افقی */
+            background-repeat: no-repeat;
+            overflow-x: hidden;
         }
 
         /* لایه تاریک روی بک‌گراند */
@@ -33,19 +33,19 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.35); /* رنگ نیمه‌شفاف سیاه */
-            backdrop-filter: blur(1.5px); /* افکت بلر برای پس‌زمینه */
-            z-index: -1; /* لایه پشت محتوای صفحه */
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(1.5px);
+            z-index: -1;
         }
 
         /* بک گراند برای موبایل */
         @media (max-width: 768px) {
             body {
-                background-image: url('assets/phone back.webp'); /* تصویر عمودی برای موبایل */
-                background-size: cover; /* پوشش تمام صفحه */
+                background-image: url('assets/phone back.webp');
+                background-size: cover;
                 background-position: center;
-                background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
-                background-attachment: fixed; /* ثابت بودن پس‌زمینه هنگام اسکرول */
+                background-repeat: no-repeat;
+                background-attachment: fixed;
             }
         }
 
@@ -53,12 +53,11 @@
         .logo {
             width: 350px;
             margin: -30px auto -50px auto;
-            filter: drop-shadow(-4px 4px 6px rgba(0, 0, 0, 0.7)); /* سایه برای لوگو */
+            filter: drop-shadow(-4px 4px 6px rgba(0, 0, 0, 0.7));
             opacity: 0;
             animation: fadeInLogo 2s ease-in-out forwards;
         }
 
-        /* انیمیشن فید این برای لوگو */
         @keyframes fadeInLogo {
             0% {
                 opacity: 0;
@@ -73,15 +72,13 @@
         /* تیتر اصلی */
         h1 {
             font-size: 45px;
-            font-family: 'Pinata', sans-serif;
             font-weight: 500;
             margin-bottom: 20px;
-            text-shadow: -4px 4px 6px rgba(0, 0, 0, 0.7); /* سایه برای متن */
+            text-shadow: -4px 4px 6px rgba(0, 0, 0, 0.7);
             opacity: 0;
-            animation: fadeInText 2s ease-in-out 0.5s forwards; /* تاخیر در انیمیشن */
+            animation: fadeInText 2s ease-in-out 0.5s forwards;
         }
 
-        /* انیمیشن فید این برای متن */
         @keyframes fadeInText {
             0% {
                 opacity: 0;
@@ -102,27 +99,26 @@
             background: linear-gradient(45deg, #FF073A, #00BFFF);
             color: white;
             border-radius: 10px;
-            width: calc(50% - 10px); /* عرض دکمه‌ها به نصف تغییر کرد */
+            width: 250px;
             font-size: 18px;
             font-weight: 500;
-            transition: transform 0.6s ease, box-shadow 0.3s ease, padding 0.3s ease; /* انیمیشن برای بزرگ شدن و سایه */
+            transition: transform 0.6s ease, box-shadow 0.3s ease, padding 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0;
-            animation: fadeInButton 2s ease-in-out 1s forwards; /* تاخیر در انیمیشن */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* سایه برای دکمه‌ها */
+            animation: fadeInButton 2s ease-in-out 1s forwards;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         /* افکت هاور روی دکمه‌ها */
         .button:hover {
-            background-color: #ff4d00; /* تغییر رنگ پس‌زمینه */
-            transform: scale(1.1); /* بزرگ شدن دکمه */
-            box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7); /* سایه قوی‌تر در هاور */
-            padding: 15px 25px; /* تغییر سایز دکمه در حالت هاور */
+            background-color: #ff4d00;
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7);
+            padding: 15px 25px;
         }
 
-        /* انیمیشن فید این برای دکمه‌ها */
         @keyframes fadeInButton {
             0% {
                 opacity: 0;
@@ -140,19 +136,12 @@
             margin-left: 10px;
         }
 
-        /* مخصوص آیکن نمونه کارها */
-        .button .portfolio-icon {
-            width: 35px; /* سایز بزرگ‌تر */
+        .portfolio-icon {
+            width: 35px;
             height: 35px;
         }
 
-        /* برای اسکرول کردن صفحه */
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-
-        /* دکمه‌ها در سیستم (دو به دو کنار هم) */
+        /* دکمه‌ها در سیستم */
         .buttons-container {
             display: flex;
             flex-wrap: wrap;
@@ -165,10 +154,6 @@
             .buttons-container {
                 flex-direction: column;
                 align-items: center;
-                gap: 30px;
-            }
-            .button {
-                width: 250px; /* برای موبایل عرض دکمه‌ها رو ثابت می‌کنیم */
             }
         }
     </style>
