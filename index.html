@@ -37,53 +37,6 @@
             z-index: -1;
         }
 
-        @media (max-width: 768px) {
-            body {
-                background-image: url('assets/phone back.webp');
-                background-attachment: fixed;
-            }
-        }
-
-        .logo {
-            width: 350px;
-            margin: -30px auto -50px auto;
-            filter: drop-shadow(-4px 4px 6px rgba(0, 0, 0, 0.7));
-            opacity: 0;
-            animation: fadeInLogo 2s ease-in-out forwards;
-        }
-
-        @keyframes fadeInLogo {
-            0% {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h1 {
-            font-size: 45px;
-            font-family: 'Pinata', sans-serif;
-            font-weight: 500;
-            margin-bottom: 20px;
-            text-shadow: -4px 4px 6px rgba(0, 0, 0, 0.7);
-            opacity: 0;
-            animation: fadeInText 2s ease-in-out 0.5s forwards;
-        }
-
-        @keyframes fadeInText {
-            0% {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         .buttons-container {
             display: flex;
             flex-wrap: wrap;
@@ -108,40 +61,44 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             opacity: 0;
             animation: fadeInButton 2s ease-in-out 1s forwards;
-            transition: transform 0.5s ease !important, box-shadow 0.3s ease !important; /* استفاده از !important */
+            transition: transform 0.5s ease !important, box-shadow 0.3s ease !important;
         }
 
         .button:hover {
-            transform: scale(1.1) !important; /* بزرگ شدن دکمه به 1.1 با استفاده از !important */
+            transform: scale(1.1) !important;
             box-shadow: 0px 0px 25px rgba(255, 7, 58, 0.7), 0px 0px 25px rgba(0, 191, 255, 0.7);
         }
 
-        @keyframes fadeInButton {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            text-align: justify;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .button img {
-            width: 24px;
-            height: 24px;
-            margin-left: 10px;
+        .about-container img {
+            width: 100px;
+            height: 100px;
         }
 
-        .button .portfolio-icon {
-            width: 35px;
-            height: 35px;
+        .about-text {
+            font-size: 18px;
+            line-height: 1.8;
         }
 
         @media (max-width: 768px) {
             .buttons-container {
                 flex-direction: column;
                 align-items: center;
+            }
+            .about-container {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
@@ -172,6 +129,16 @@
             تماس با ما
             <img src="https://wallpapers.com/images/hd/blue-phone-icon-2eryoedlspnaaa7i.jpg" alt="Phone">
         </a>
+    </div>
+
+    <div class="about-container">
+        <img src="assets/about-logo.png" alt="About Editopia">
+        <p class="about-text">
+            ادیتوپیا یک مجموعه تخصصی در زمینه تولید و مدیریت محتوا است که به کسب‌وکارهای آنلاین و پیج‌های شخصی و بیزنسی خدمات حرفه‌ای ارائه می‌دهد.
+            تیم ما با ارائه خدماتی مثل سناریو نویسی، تدوین ویدیو، طراحی پست و کاور، مدیریت پیج و طراحی سایت، به شما کمک می‌کند تا محتوای باکیفیت و جذاب تولید کنید.
+            ما پروژه‌ها را با بهترین کیفیت و در سریع‌ترین زمان ممکن تحویل می‌دهیم.<br>
+            <strong>کیفیت، سرعت، خلاقیت</strong>
+        </p>
     </div>
 
 </body>
