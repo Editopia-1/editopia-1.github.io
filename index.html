@@ -13,7 +13,7 @@
         body {
             font-family: 'Pinata', sans-serif;
             text-align: center;
-            background-image: url('assets/desc back.webp'); /* بک‌گراند دسکتاپ */
+            background-image: url('assets/desc back.webp');
             background-size: cover;
             background-position: center;
             color: white;
@@ -24,7 +24,6 @@
             overflow-x: hidden;
         }
 
-        /* لایه تاریک روی بک‌گراند */
         body::after {
             content: "";
             position: fixed;
@@ -37,7 +36,6 @@
             z-index: -1;
         }
 
-        /* بک‌گراند موبایل */
         @media (max-width: 768px) {
             body {
                 background-image: url('assets/phone back.webp');
@@ -45,7 +43,6 @@
             }
         }
 
-        /* لوگو */
         .logo {
             width: 350px;
             margin: -30px auto -50px auto;
@@ -65,7 +62,6 @@
             }
         }
 
-        /* تیتر اصلی */
         h1 {
             font-size: 45px;
             font-family: 'Pinata', sans-serif;
@@ -87,7 +83,6 @@
             }
         }
 
-        /* دکمه‌ها */
         .buttons-container {
             display: flex;
             flex-wrap: wrap;
@@ -97,7 +92,7 @@
         }
 
         .button {
-            display: inline-flex; /* تغییر از flex به inline-flex برای استقلال دکمه‌ها */
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             margin: 10px;
@@ -116,8 +111,8 @@
         }
 
         .button:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7);
+            transform: scale(1.15);
+            box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7), 0px 0px 15px rgba(0, 191, 255, 0.7);
         }
 
         @keyframes fadeInButton {
@@ -137,13 +132,11 @@
             margin-left: 10px;
         }
 
-        /* سایز آیکن نمونه کارها */
         .button .portfolio-icon {
             width: 35px;
             height: 35px;
         }
 
-        /* در موبایل دکمه‌ها زیر هم */
         @media (max-width: 768px) {
             .buttons-container {
                 flex-direction: column;
