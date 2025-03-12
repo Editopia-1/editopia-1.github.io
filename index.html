@@ -15,20 +15,23 @@
             font-family: 'Pinata', sans-serif;
             text-align: center;
             background-image: url('assets/desc back.webp'); /* تصویر افقی برای سیستم */
-            background-size: cover;
+            background-size: 100% 100%; /* برای اینکه بک‌گراند دقیقا به اندازه صفحه پوشش دهد */
             background-position: center;
             color: white;
             padding-top: 55px;
             min-height: 100vh; /* به اندازه صفحه میاد */
             position: relative;
+            background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
+            overflow-x: hidden; /* جلوگیری از اسکرول افقی */
         }
 
         /* بک گراند برای موبایل */
         @media (max-width: 768px) {
             body {
                 background-image: url('assets/phone back.webp'); /* تصویر عمودی برای موبایل */
-                background-size: cover;
+                background-size: 100% 100%; /* پوشش تمام صفحه */
                 background-position: center;
+                background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
             }
         }
 
@@ -40,25 +43,56 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.28); /* رنگ نیمه‌شفاف سیاه */
+            background: rgba(0, 0, 0, 0.35); /* رنگ نیمه‌شفاف سیاه */
             backdrop-filter: blur(1.5px); /* افکت بلر برای پس‌زمینه */
             z-index: -1; /* لایه پشت محتوای صفحه */
         }
 
+        /* لوگو */
         .logo {
             width: 350px;
             margin: -30px auto -50px auto;
             filter: drop-shadow(-4px 4px 6px rgba(0, 0, 0, 0.7)); /* سایه برای لوگو */
+            opacity: 0;
+            animation: fadeInLogo 2s ease-in-out forwards;
         }
 
+        /* انیمیشن فید این برای لوگو */
+        @keyframes fadeInLogo {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* تیتر اصلی */
         h1 {
             font-size: 45px;
             font-family: 'Pinata', sans-serif;
             font-weight: 500;
             margin-bottom: 20px;
             text-shadow: -4px 4px 6px rgba(0, 0, 0, 0.7); /* سایه برای متن */
+            opacity: 0;
+            animation: fadeInText 2s ease-in-out 0.5s forwards; /* تاخیر در انیمیشن */
         }
 
+        /* انیمیشن فید این برای متن */
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* دکمه‌ها */
         .button {
             display: block;
             margin: 15px auto;
@@ -74,8 +108,23 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            opacity: 0;
+            animation: fadeInButton 2s ease-in-out 1s forwards; /* تاخیر در انیمیشن */
         }
 
+        /* انیمیشن فید این برای دکمه‌ها */
+        @keyframes fadeInButton {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* دکمه‌ها در حالت هاور */
         .button:hover {
             transform: scale(1.1);
             box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7);
@@ -87,11 +136,12 @@
             margin-left: 10px;
         }
 
-        /* برای اسکرول کردن تصویر */
+        /* برای اسکرول کردن صفحه */
         html, body {
             height: 100%;
             margin: 0;
         }
+
     </style>
 </head>
 <body>
@@ -101,12 +151,12 @@
     <h1>استودیو ادیتوپیا</h1>
 
     <a href="https://www.instagram.com/edit_opia.co/?utm_source=qr&r=nametag" target="_blank" class="button">
-        اینستاگرام
+        پیج اینستاگرام
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
     </a>
 
     <a href="https://t.me/Editopia_Support" target="_blank" class="button">
-        تلگرام
+        پشتیبانی تلگرام
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
     </a>
 
