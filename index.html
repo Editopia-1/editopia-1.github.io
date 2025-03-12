@@ -16,11 +16,12 @@
             background-image: url('assets/desc back.webp'); 
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: white;
             padding-top: 55px;
             min-height: 100vh;
             position: relative;
-            background-repeat: no-repeat;
             overflow-x: hidden;
         }
 
@@ -90,30 +91,24 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 15px auto;
+            margin: 10px;
             padding: 12px 20px;
             text-decoration: none;
             background: linear-gradient(45deg, #FF073A, #00BFFF);
             color: white;
             border-radius: 10px;
-            width: 250px;
+            width: 240px;
             font-size: 18px;
             font-weight: 500;
-            transition: transform 0.6s ease, box-shadow 0.3s ease, padding 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             opacity: 0;
             animation: fadeInButton 2s ease-in-out 1s forwards;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         .button:hover {
-            background-color: #ff4d00;
             transform: scale(1.1);
             box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7);
-            padding: 15px 25px;
-        }
-
-        .button {
-            transition: transform 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
         }
 
         @keyframes fadeInButton {
@@ -138,24 +133,17 @@
             height: 35px;
         }
 
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-
-        /* دکمه‌ها در سیستم (دو به دو کنار هم و وسط صفحه) */
         .buttons-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 15px;
-            max-width: 520px; /* عرض محدود برای دو دکمه کنار هم */
-            margin: 0 auto; /* مرکز کردن */
+            gap: 10px;
+            max-width: 520px;
+            margin: 0 auto;
         }
 
-        /* برای موبایل دکمه‌ها زیر هم */
-        @media (max-width: 768px) {
+        @media (max-width: 500px) {
             .buttons-container {
                 flex-direction: column;
                 align-items: center;
