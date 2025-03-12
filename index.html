@@ -10,22 +10,20 @@
             src: url('assets/Pinata-Regular.ttf') format('truetype');
         }
 
-        /* بک گراند برای سیستم */
         body {
             font-family: 'Pinata', sans-serif;
             text-align: center;
-            background-image: url('assets/desc back.webp'); /* تصویر افقی برای سیستم */
-            background-size: cover; /* برای اینکه بک‌گراند دقیقا به اندازه صفحه پوشش دهد */
+            background-image: url('assets/desc back.webp'); 
+            background-size: cover;
             background-position: center;
             color: white;
             padding-top: 55px;
-            min-height: 100vh; /* به اندازه صفحه میاد */
+            min-height: 100vh;
             position: relative;
-            background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
-            overflow-x: hidden; /* جلوگیری از اسکرول افقی */
+            background-repeat: no-repeat;
+            overflow-x: hidden;
         }
 
-        /* لایه تاریک روی بک‌گراند */
         body::after {
             content: "";
             position: fixed;
@@ -33,32 +31,29 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.35); /* رنگ نیمه‌شفاف سیاه */
-            backdrop-filter: blur(1.5px); /* افکت بلر برای پس‌زمینه */
-            z-index: -1; /* لایه پشت محتوای صفحه */
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(1.5px);
+            z-index: -1;
         }
 
-        /* بک گراند برای موبایل */
         @media (max-width: 768px) {
             body {
-                background-image: url('assets/phone back.webp'); /* تصویر عمودی برای موبایل */
-                background-size: cover; /* پوشش تمام صفحه */
+                background-image: url('assets/phone back.webp'); 
+                background-size: cover;
                 background-position: center;
-                background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
-                background-attachment: fixed; /* ثابت بودن پس‌زمینه هنگام اسکرول */
+                background-repeat: no-repeat;
+                background-attachment: fixed;
             }
         }
 
-        /* لوگو */
         .logo {
             width: 350px;
             margin: -30px auto -50px auto;
-            filter: drop-shadow(-4px 4px 6px rgba(0, 0, 0, 0.7)); /* سایه برای لوگو */
+            filter: drop-shadow(-4px 4px 6px rgba(0, 0, 0, 0.7));
             opacity: 0;
             animation: fadeInLogo 2s ease-in-out forwards;
         }
 
-        /* انیمیشن فید این برای لوگو */
         @keyframes fadeInLogo {
             0% {
                 opacity: 0;
@@ -70,18 +65,16 @@
             }
         }
 
-        /* تیتر اصلی */
         h1 {
             font-size: 45px;
             font-family: 'Pinata', sans-serif;
             font-weight: 500;
             margin-bottom: 20px;
-            text-shadow: -4px 4px 6px rgba(0, 0, 0, 0.7); /* سایه برای متن */
+            text-shadow: -4px 4px 6px rgba(0, 0, 0, 0.7);
             opacity: 0;
-            animation: fadeInText 2s ease-in-out 0.5s forwards; /* تاخیر در انیمیشن */
+            animation: fadeInText 2s ease-in-out 0.5s forwards;
         }
 
-        /* انیمیشن فید این برای متن */
         @keyframes fadeInText {
             0% {
                 opacity: 0;
@@ -93,9 +86,10 @@
             }
         }
 
-        /* دکمه‌ها */
         .button {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 15px auto;
             padding: 12px 20px;
             text-decoration: none;
@@ -105,29 +99,23 @@
             width: 250px;
             font-size: 18px;
             font-weight: 500;
-            transition: transform 0.6s ease, box-shadow 0.3s ease, padding 0.3s ease; /* انیمیشن برای بزرگ شدن و سایه */
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            transition: transform 0.6s ease, box-shadow 0.3s ease, padding 0.3s ease;
             opacity: 0;
-            animation: fadeInButton 2s ease-in-out 1s forwards; /* تاخیر در انیمیشن */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* سایه برای دکمه‌ها */
+            animation: fadeInButton 2s ease-in-out 1s forwards;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
-        /* افکت هاور روی دکمه‌ها */
         .button:hover {
-            background-color: #ff4d00; /* تغییر رنگ پس‌زمینه */
-            transform: scale(1.1); /* بزرگ شدن دکمه */
-            box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7); /* سایه قوی‌تر در هاور */
-            padding: 15px 25px; /* تغییر سایز دکمه در حالت هاور */
-        }
-        
-        /* دکمه‌های دیگر نباید تغییر سایز دهند */
-        .button {
-            transition: transform 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease; /* انیمیشن برای بزرگ شدن و سایه */
+            background-color: #ff4d00;
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(255, 7, 58, 0.7);
+            padding: 15px 25px;
         }
 
-        /* انیمیشن فید این برای دکمه‌ها */
+        .button {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+        }
+
         @keyframes fadeInButton {
             0% {
                 opacity: 0;
@@ -145,24 +133,25 @@
             margin-left: 10px;
         }
 
-        /* مخصوص آیکن نمونه کارها */
         .button .portfolio-icon {
-            width: 35px; /* سایز بزرگ‌تر */
+            width: 35px;
             height: 35px;
         }
 
-        /* برای اسکرول کردن صفحه */
         html, body {
             height: 100%;
             margin: 0;
         }
 
-        /* دکمه‌ها در سیستم (دو به دو کنار هم) */
+        /* دکمه‌ها در سیستم (دو به دو کنار هم و وسط صفحه) */
         .buttons-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
+            align-items: center;
+            gap: 15px;
+            max-width: 520px; /* عرض محدود برای دو دکمه کنار هم */
+            margin: 0 auto; /* مرکز کردن */
         }
 
         /* برای موبایل دکمه‌ها زیر هم */
@@ -186,6 +175,11 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
         </a>
 
+        <a href="https://drive.google.com/drive/folders/1sQDQLx8bIJ1_d0b2R5pdkeLN93B_YXwA?usp=drive_link" target="_blank" class="button">
+            نمونه کارها
+            <img src="assets/portfolio.webp" alt="Portfolio" class="portfolio-icon">
+        </a>
+
         <a href="https://t.me/Editopia_Support" target="_blank" class="button">
             پشتیبانی تلگرام
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
@@ -194,11 +188,6 @@
         <a href="tel:+989212089337" class="button">
             تماس با ما
             <img src="https://wallpapers.com/images/hd/blue-phone-icon-2eryoedlspnaaa7i.jpg" alt="Phone">
-        </a>
-
-        <a href="https://drive.google.com/drive/folders/1sQDQLx8bIJ1_d0b2R5pdkeLN93B_YXwA?usp=drive_link" target="_blank" class="button">
-            نمونه کارها
-            <img src="assets/portfolio.webp" alt="Portfolio" class="portfolio-icon">
         </a>
     </div>
 
